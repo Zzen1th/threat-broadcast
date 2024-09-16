@@ -57,8 +57,8 @@ class RedQueen(BaseCrawler):
 
         cves = []
         if response.status_code == 200:
-            print(responese.text)
             json_obj = json.loads(response.text)
+            print(json_obk)
             for obj in json_obj.get('intgs'):
                 cve = self.to_cve(obj)
                 if cve.is_vaild():
